@@ -58,3 +58,6 @@ C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.Login.resource
 C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.Add_new_customer.resources
 C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.AdminPage.resources
 C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.Resetpass.resources
+C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.Model.Orders_Detiles.resources
+C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.addnewproduct.resources
+C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.allpinding.resources

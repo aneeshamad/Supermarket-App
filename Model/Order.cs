@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Project.Model
@@ -7,10 +8,11 @@ namespace Project.Model
     
     class Order : IShoppingBag
     {
-        public enum Order_Status { New, inProgerss, Closed, Modified, deliverd ,Pending}
+        public enum Order_Status { New, inProgerss, Pending,  deliverd }
         public int  id {get;set;}
+        public DateTime Date1 { get; set; }
         public float  Tax { get; set; }
-        public Order_Status status { get; set; }
+        public int status { get; set; }
         public  Customer  ord_cus { get; set; }
         
         public List<Transaction_item> items = new List<Transaction_item>();
@@ -20,70 +22,34 @@ namespace Project.Model
        public   Order(float tax ,int Status) {
             
             this.Tax = tax;
-            this.status = (Order_Status)Status;
+            this.status = Status;
             
         }
-        public bool add_item(Transaction_item item)
-        {
-
-            items.Add(item);
-            return true;
-
-        }
-        public bool delete_item(Transaction_item item) {
-            
-            items.Remove(item);
-            return true;
-            
-        }
-        public bool update_item(Transaction_item item, int new_quintity)
-        {
-                foreach (Transaction_item a in items)
-                {
-                if (a == item)
-                {
-                    a.Quintity = new_quintity;
-                    return true;
-                }
-                else return false;
-                }
-            return true;
-        }
-
-        public  float  get_order_price()
-        {
-            float sum = 0;
-            foreach (Transaction_item t in items)
-            {
-                    sum = sum + (t.product.price * t.Quintity);    
-            }
-            if (Tax == 0)
-                return sum;
-            else
-                return sum +( sum * Tax);
-        }
-
-        public string PrintShoppingBag()
-        {
+        [NotMapped]
+        public float Final_Cost { get; set; }
 
 
-            string myshoppingBag = "Order ID "+'\t' + id +'\t'+ " Status "+'\t'+ status+ " \t"+" Date "+ DateTime.Now +'\n'+'\n';
+        
+        public string PrintShoppingBag() {
 
-            myshoppingBag = myshoppingBag + " Customer Name =    " + ord_cus.User_name.ToString()+"\n";
-            myshoppingBag = myshoppingBag + " Product Name " +'\t' + "Price "+'\t'+ " Quintity"+'\t'+ "Total Price"+'\n'+'\n';
+            string myshoppingBag = "Order ID " + '\t' + id + '\t' + " Status " + '\t' + status + " \t" + " Date " + DateTime.Now + '\n' + '\n';
+
+            myshoppingBag = myshoppingBag + " Customer Name =    " + ord_cus.User_name.ToString() + "\n";
+            myshoppingBag = myshoppingBag + " Product Name " + '\t' + "Price " + '\t' + " Quintity" + '\t' + "Total Price" + '\n' + '\n';
 
             foreach (Transaction_item T in items)
             {
 
-                myshoppingBag = myshoppingBag + T.product.name + '\t' + T.product.price + '\t' + T.Quintity + '\t' + T.item_tot_price() + '\n' ;
-                
+                myshoppingBag = myshoppingBag + T.product.name + '\t' + T.product.price + '\t' + T.Quintity + '\t' + T.CostPerItem + '\n';
+
             }
-            myshoppingBag = myshoppingBag +'\n'+'\n'+ "Tax   = " + Tax + '\n' + "Total price " + '\t' + get_order_price();
+            myshoppingBag = myshoppingBag + '\n' + '\n' + "Tax   = " + Tax + '\n' + "Total price " + '\t' + Final_Cost;
             return myshoppingBag;
 
         }
+    }
+        
 
     }
 
-}
 

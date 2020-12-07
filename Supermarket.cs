@@ -28,8 +28,8 @@ namespace Project
         {
             
             Login login = new Login();
-            login.ShowDialog();
-            this.Visible = false;
+            login.Show();
+            
             
         }
 

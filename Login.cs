@@ -49,5 +49,10 @@ namespace Project
                 s.ShowDialog();
             
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
