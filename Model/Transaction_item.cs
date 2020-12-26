@@ -21,6 +21,7 @@ namespace Project.Model
         [NotMapped]
         public float CostPerItem { get; set; }
 
-
+            
+        
     }   
 }

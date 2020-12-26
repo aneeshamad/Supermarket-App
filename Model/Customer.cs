@@ -17,13 +17,13 @@ namespace Project.Model
         public List<Order> orders = new List<Order>();
 
           public Customer() { }
-          public Customer (String name ,string pass ,String address,String con_NO, int sta ){
+          public Customer (String name ,string pass ,String address,String con_NO, customer_Status sta ){
             
             User_name = name;
             Password = pass;
             Address = address;
             contact_NO = con_NO;
-            status = (customer_Status)sta;
+            status = sta;
         }
         
 

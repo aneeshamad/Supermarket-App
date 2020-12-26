@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Project.Migrations
 {
-    public partial class SupermarketDB : Migration
+    public partial class second : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -49,6 +50,7 @@ namespace Project.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Date1 = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Tax = table.Column<float>(type: "real", nullable: false),
                     status = table.Column<int>(type: "int", nullable: false),
                     ord_cusid = table.Column<int>(type: "int", nullable: true)

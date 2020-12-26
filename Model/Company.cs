@@ -10,7 +10,7 @@ namespace Project.Model
         public String Location { get; set; }
         public  String Company_type { get; set; }
         public Company() { }
-        public Company( String name, string pass, String address, String con_NO, int status , string loc,string type):base ( name, pass, address, con_NO,status) {
+        public Company( String name, string pass, String address, String con_NO, customer_Status status , string loc,string type):base ( name, pass, address, con_NO,status) {
             Location = loc;
             Company_type = type;
 

@@ -39,10 +39,28 @@ namespace Project
                 Close();
             }
             else
-                MessageBox.Show("Incorrect User Name or Password ");
+            {
+                int id;
+                string s = username.Text.ToString();
+                bool u = context.Customers.Select(c => c.User_name).ToList().Contains(s);
+                if (u)
+                {
 
+                    string pas = context.Customers.Where(c => c.User_name == s).Select(d => d.Password).Single();
+                    if (pas == password.Text.ToString())
+                    {
+                        id = context.Customers.Where(c => c.User_name == s).Select(d => d.id).Single();
+                        Customerpage g = new Customerpage(id);
+                        g.Show();
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("incorrect password");
+                }
+                else
+                    MessageBox.Show("Incorrect Username  or  Username not found");
+            }
         }
-
         private void label3_Click(object sender, EventArgs e)
         {
             Resetpass s = new Resetpass();

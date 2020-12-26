@@ -10,8 +10,8 @@ using Project.Model;
 namespace Project.Migrations
 {
     [DbContext(typeof(supermarketContext))]
-    [Migration("20201206220535_com2")]
-    partial class com2
+    [Migration("20201209234735_second")]
+    partial class second
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

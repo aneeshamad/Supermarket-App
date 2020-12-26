@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static Project.Model.Customer;
 
 namespace Project
 {
@@ -32,7 +33,7 @@ namespace Project
             String Pass = pass.Text.ToString();
             string Address = address.Text.ToString();
             String contact = NO.Text.ToString();
-            int Status =status.SelectedIndex;
+            int  Status =status.SelectedIndex;
             name.Text = "";
             pass.Text = "";
             address.Text = "";
@@ -42,12 +43,12 @@ namespace Project
                 
                 if (mail.Checked)
                 {
-                    Single_User m = new Single_User(Name, Pass, Address, contact, Status, 'M');
+                    Single_User m = new Single_User(Name, Pass, Address, contact,( customer_Status )Status, 'M');
                     context.Single_Users.Add(m);
                 }
                 else
                 {
-                    Single_User f = new Single_User(Name, Pass, Address, contact, Status, 'F');
+                    Single_User f = new Single_User(Name, Pass, Address, contact, (customer_Status) Status, 'F');
                     context.Single_Users.Add(f);
 
                 }
@@ -58,7 +59,7 @@ namespace Project
                
                 String t = type.Text.ToString();
                 string loc = location.Text.ToString();
-                Company c = new Company(Name, Pass, Address, contact, Status, loc, t);
+                Company c = new Company(Name, Pass, Address, contact, (customer_Status) Status, loc, t);
                 context.Companys.Add(c);
             }
             context.SaveChanges();

@@ -64,6 +64,7 @@
             this.label4.Size = new System.Drawing.Size(411, 28);
             this.label4.TabIndex = 5;
             this.label4.Text = "View the count of customers of type company";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // viewmax
             // 
@@ -75,6 +76,7 @@
             this.viewmax.Size = new System.Drawing.Size(525, 28);
             this.viewmax.TabIndex = 4;
             this.viewmax.Text = "View the name of customer whose order has the larger cost";
+            this.viewmax.Click += new System.EventHandler(this.viewmax_Click);
             // 
             // viewallzero
             // 
@@ -86,6 +88,7 @@
             this.viewallzero.Size = new System.Drawing.Size(363, 28);
             this.viewallzero.TabIndex = 3;
             this.viewallzero.Text = "View all product with inventory level = 0";
+            this.viewallzero.Click += new System.EventHandler(this.viewallzero_Click);
             // 
             // addnewproduct
             // 

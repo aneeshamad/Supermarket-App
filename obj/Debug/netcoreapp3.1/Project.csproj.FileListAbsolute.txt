@@ -41,7 +41,6 @@ C:\Users\ASD\source\repos\Project\bin\Debug\netcoreapp3.1\runtimes\win-x86\nativ
 C:\Users\ASD\source\repos\Project\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\ASD\source\repos\Project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.csproj.CopyComplete
-C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.csproj.CoreCompileInputs.cache
 C:\Users\ASD\source\repos\Project\bin\Debug\netcoreapp3.1\Project.deps.json
 C:\Users\ASD\source\repos\Project\bin\Debug\netcoreapp3.1\Project.runtimeconfig.json
 C:\Users\ASD\source\repos\Project\bin\Debug\netcoreapp3.1\Project.runtimeconfig.dev.json
@@ -61,3 +60,12 @@ C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.Resetpass.reso
 C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.Model.Orders_Detiles.resources
 C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.addnewproduct.resources
 C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.allpinding.resources
+C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.Level_0.resources
+C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.Customerpage.resources
+C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.View_All_Product.resources
+C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.MakeOrder.resources
+C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.ConformOrder.resources
+C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.showOrderDetails.resources
+C:\Users\ASD\source\repos\Project\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\ASD\source\repos\Project\bin\Debug\netcoreapp3.1\itextsharp.dll
+C:\Users\ASD\source\repos\Project\obj\Debug\netcoreapp3.1\Project.csproj.CoreCompileInputs.cache
